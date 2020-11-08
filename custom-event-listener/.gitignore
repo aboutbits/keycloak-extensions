@@ -1,0 +1,10 @@
+# Basic
+.DS_Store
+
+# IDE
+/.vscode
+/.idea
+*.iml
+
+# Project
+target

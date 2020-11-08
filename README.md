@@ -42,4 +42,5 @@ All catched emails can be visited at [http://localhost:8025/](http://localhost:8
 
 ## Custom Event Listener
 
-//TODO
+Lets build a custom event listener, that sends an email to an admin on every new registration.
+
