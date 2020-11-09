@@ -24,8 +24,17 @@ Or when using Docker mount the file `./custom-event-listener-0.0.1-SNAPSHOT.jar:
 
 Set the event listener
 
-* Open up Keycloak administration console and select your realm
-* Go to events in the left side bar under Manage
-* Open the config [tab]
-* click in the input box next to event listeners, a dropdown with all available event listeners is shown
-* select our custom_event_listener
+1. Open up Keycloak administration console and select your realm
+2. Go to events in the left side bar under Manage
+3. Open the config [tab]
+4. click in the input box next to event listeners, a dropdown with all available event listeners is shown
+5. select our custom_event_listener
+
+
+## How to test it?
+
+After you have setup everything and configured the listener do the following:
+
+1. Open the web interface of Mailhog at http://localhost:8085
+2. Register a new user on keycloak
+3. Go to Mailhog and check that it catched a mail for the admin
