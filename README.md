@@ -15,6 +15,14 @@ This repository shows how you can extend Keycloak's features.
 
 ## Setup
 
+### Build the artefact of the custom event listener
+
+If you want to test the example event listener, than you have to build it before you start the keycloak server.
+
+```bash
+cd custom-event-listener && docker run --rm maven:3-openjdk-11 mvn clean install
+```
+
 ### Start and stop the containers
 
 Before start working you have to start the Docker containers:

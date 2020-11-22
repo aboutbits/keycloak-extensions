@@ -12,7 +12,7 @@ mvn clean install
 ## How to build the artifact with docker?
 
 ```sh
-docker run --rm -v $PWD:/code -w /code maven:3-openjdk-11 mvn clean install
+docker run --rm maven:3-openjdk-11 mvn clean install
 ```
 
 ## How to add the jar in Keycloak?
