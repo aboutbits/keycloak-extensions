@@ -44,3 +44,4 @@ All catched emails can be visited at [http://localhost:8025/](http://localhost:8
 
 Lets build a custom event listener, that sends an email to an admin on every new registration.
 
+Follow this [link](custom-event-listener/README.md) for more details.

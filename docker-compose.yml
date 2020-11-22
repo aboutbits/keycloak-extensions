@@ -12,6 +12,8 @@ services:
       DB_PASSWORD: password
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: password
+    volumes:
+      - ./custom-event-listener/target/custom-event-listener-0.0.1-SNAPSHOT.jar://opt/jboss/keycloak/standalone/deployments/custom-event-listener-0.0.1-SNAPSHOT.jar
     depends_on:
       - postgres
     ports:
