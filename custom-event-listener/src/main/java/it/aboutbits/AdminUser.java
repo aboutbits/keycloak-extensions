@@ -123,7 +123,7 @@ public class AdminUser implements UserModel {
 
     @Override
     public String getEmail() {
-        return "admin@aboutbits.it";
+        return "admin@example.com";
     }
 
     @Override
