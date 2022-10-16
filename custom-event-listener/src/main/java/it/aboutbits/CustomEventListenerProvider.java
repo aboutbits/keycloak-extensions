@@ -32,7 +32,7 @@ public class CustomEventListenerProvider implements EventListenerProvider {
             log.info("-----------------------------------------------------------");
 
             RealmModel realm = this.model.getRealm(event.getRealmId());
-            UserModel newRegisteredUser = this.session.users().getUserById(event.getUserId(), realm);
+            UserModel newRegisteredUser = this.session.users().getUserById(realm, event.getUserId());
 
             String emailPlainContent = "New user registration\n\n" +
                     "Email: " + newRegisteredUser.getEmail() + "\n" +
@@ -49,7 +49,7 @@ public class CustomEventListenerProvider implements EventListenerProvider {
             DefaultEmailSenderProvider senderProvider = new DefaultEmailSenderProvider(session);
 
             try {
-                senderProvider.send(session.getContext().getRealm().getSmtpConfig(), new AdminUser(), "Keycloak - New Registration", emailPlainContent, emailHtmlContent);
+                senderProvider.send(session.getContext().getRealm().getSmtpConfig(), "admin@example.com", "Keycloak - New Registration", emailPlainContent, emailHtmlContent);
             } catch (EmailException e) {
                 log.error("Failed to send email", e);
             }
