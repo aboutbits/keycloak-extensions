@@ -20,7 +20,8 @@ This repository shows how you can extend Keycloak's features.
 If you want to test the example event listener, than you have to build it before you start the keycloak server.
 
 ```bash
-cd custom-event-listener && docker run --rm maven:3-openjdk-11 mvn clean install
+cd custom-event-listener && docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app maven:3-openjdk-11 mvn clean install
+
 ```
 
 ### Start and stop the containers
